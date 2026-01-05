@@ -35,7 +35,7 @@ Turning this option on will subdivide the faces horizontally and vertically, if 
    * - **Offset**
      - Push the parapet in or out.
 
-
+----
 
 Slope
 -------
@@ -151,6 +151,7 @@ Will try to generate an object along the top edge of the slope roof.
    * - **Extend**
      - Can make the crease longer or shorter.
 
+----
 
 Dressing
 -------------
@@ -188,6 +189,8 @@ Will scatter a collection of object on the flat roof.
 
   If you want to keep your objects only on flat roof or include the slopes.
 
+----
+
 Modular
 --------
 
@@ -216,6 +219,8 @@ Here is the position list:
      -  Change roof size.
    * - **Constant/Relative Scale**
      -  Size mode.
+
+----
 
 Gutter
 --------
