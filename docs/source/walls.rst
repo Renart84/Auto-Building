@@ -76,12 +76,14 @@ Each letter (A–H) shares the same set of options.
    * - **Vertical Division**
      - Divide the faces vertically.
 
+
+.. rubric:: Deform
+Turning this option on will **deform** the objects spawned to fit the size of the faces. Note: When doing this the instances are **applied** automatically.
+
 .. list-table::
    :header-rows: 0
-   :widths: 22 78
+   :widths: 22 120
 
-   * - **Deform**
-     - Turning this option on will **deform** the objects spawned to fit the size of the faces. Note: When doing this the instances are **applied** automatically.
    * - **Constant scale**
      - The thickness of the objects are locked and don't depend on the size of the faces.
    * - **Scale**
