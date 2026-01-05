@@ -7,19 +7,17 @@ Welcome!
 Welcome to the Auto-Building's documentation!
 
 .. note::
-   **This addon is for Blender 3.5+ only!**
+   **Version 2.0 is for Blender 4.5+ only!**
 
 
-.. note::
-   **The version 1.2 of the tool have some new features that are not covered by the documentation yet, some menu may differ too. But hopefully they are similar enough to be understood.**
-
-The system is only using Geometry Node to work but you don't need to have any knowledge in this aspect of Blender to use it.
+The system is only using Geometry Node to work but you don't need to have any knowledge in this aspect of Blender to use it!
+The addon only provides an interface to help visualize the tool but all the settings are also available in the Modifier interface.
 
 Introduction
 ~~~~~~~~~~~~
 ------------------------
 
-The idea is to take a simple low poly mesh and distribute/replace geometries on the faces to create a complex building. 
+The idea is to take a simple low poly mesh and distribute/replace geometries on the faces, to create a complex building. 
 Complex, but easier to manipulate and change as everything is handled procedurally by the power of Geometry nodes!
 
 You will have to build the parts of your buildings separetely and put them in their own respective collection (Windows, Doors, Balcony, Thing, etc)
