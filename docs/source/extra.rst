@@ -43,7 +43,7 @@ Automatic support, spawning on down facing faces.
      -  Size constant or relative to the edge face.
    * - **Scale**
      -  Thickness of the support.
-   * - **Support Pillar subdivision*
+   * - **Support Pillar subdivision**
      -  If Fit Edge is off, will add more pillars.
 
 ----
