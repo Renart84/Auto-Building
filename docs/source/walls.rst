@@ -55,6 +55,9 @@ For example, to use the collection assigned to **Wall A**, apply the material **
 Each letter (A–H) shares the same set of options.  
 
 .. list-table::
+   :header-rows: 0
+   :widths: 22 78
+
    * - **Collection**
      - Chose the collection that will be used for each ID material corresponding to this wall.
    * - **Base**
@@ -63,6 +66,9 @@ Each letter (A–H) shares the same set of options.
      - Change the objects selected to be spawned.
 
 .. list-table::
+   :header-rows: 0
+   :widths: 22 78
+
    * - **Auto-Subdivide**
      - Turning this option on will subdivide the faces horizontally and vertically, if the space allows it.
    * - **Horizontal Division**
@@ -71,6 +77,9 @@ Each letter (A–H) shares the same set of options.
      - Divide the faces vertically.
 
 .. list-table::
+   :header-rows: 0
+   :widths: 22 78
+
    * - **Deform**
      - Turning this option on will **deform** the objects spawned to fit the size of the faces. Note: When doing this the instances are **applied** automatically.
    * - **Constant scale**
@@ -87,6 +96,9 @@ Each letter (A–H) shares the same set of options.
      - Smoothing subdivision.
 
 .. list-table::
+   :header-rows: 0
+   :widths: 22 78
+
    * - **Density**
      - At 1, all the assigned face will spawn an object from the collection, reducing the density will randomly remove some of them.
    * - **Random Mirror**
@@ -99,6 +111,9 @@ Each letter (A–H) shares the same set of options.
      - Overide Base wall subdivision result.
 
 .. list-table::
+   :header-rows: 0
+   :widths: 22 78
+
    * - **Reset origins**
      - Placement of the object's origin is very important, but you can center automatically with this option.
    * - **Snapping**
