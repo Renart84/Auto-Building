@@ -11,8 +11,7 @@ Welcome to the Auto-Building's documentation!
 
 
 .. note::
-   **The system is using geometry node to run, the Addon itself is not mandatory but provides a better interface as well as some useful actions.
-**
+   **The system is using geometry node to run, the Addon itself is not mandatory but provides a better interface as well as some useful actions.**
 
 
 Introduction
