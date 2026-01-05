@@ -1,9 +1,5 @@
-Template for the Read the Docs tutorial
-=======================================
+Doc page:
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+https://auto-building.readthedocs.io/en/latest/index.html
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+Get the addon: https://superhivemarket.com/products/auto-building
