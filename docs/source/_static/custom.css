@@ -26,3 +26,10 @@
   margin-left: 0 !important;   /* left aligned */
   margin-right: auto !important;
 }
+
+
+.rst-content figure img {
+  max-width: 520px;
+  height: auto;
+}
+
