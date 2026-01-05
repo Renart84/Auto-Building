@@ -26,7 +26,7 @@ You first need to build your building parts separately and organize them into de
 
 Then, you set up the system by assigning each collection to a specific category, either through the add-on menu or directly in the Geometry Nodes modifier.
 
-Once this is done, assigning that the ID material correspinding to the category to any face of your base mesh will automatically spawn the objects from the corresponding collection at the center of that face.
+Once this is done, assigning that the ID material corresponding to the category to any face of your base mesh will automatically spawn the objects from the corresponding collection at the center of that face.
 
 .. image:: images/MainProcess.jpg
 
