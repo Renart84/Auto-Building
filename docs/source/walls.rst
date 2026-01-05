@@ -44,7 +44,7 @@ Wall A - H
 -----------
 .. figure:: images/CollectionAssignment.gif
    :alt: Assigning collections using Wall ID materials
-   :align: left
+   :align: center
 
    Assign ID_Wall materials to decide where each collection spawns.
 
@@ -135,5 +135,6 @@ Turning this option on will **deform** the objects spawned to fit the size of th
 .. figure:: images/UseBoolean.gif
    :alt: Use Boolean option
    :align: left
+
 
 
