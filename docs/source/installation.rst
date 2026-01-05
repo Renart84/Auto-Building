@@ -18,7 +18,7 @@ Now a new tab called Auto-Building will appear in the viewport right panel (shor
 This tab will show you the Auto-Building Geometry Node of your building whenever you select one.
 It will also allow you to create a starting base with a simple template. With the correct Materials setup.
 
-.. image:: images/StartBuilding.jpg
+.. image:: images/StartBuilding.png
 
 
 Asset Browser
