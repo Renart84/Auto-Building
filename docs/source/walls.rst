@@ -5,7 +5,7 @@ Assign **ID materials** to the faces of your mesh to control how the system gene
 
 .. figure:: images/MaterialAssignment.gif
    :alt: Assigning ID materials to faces
-   :align: center
+   :align: left
 
    Assign the correct ID material to each face to control where and what gets generated.
 
@@ -34,7 +34,7 @@ Each Base has the following options:
 
 .. figure:: images/EmptyMaterial.gif
    :alt: Base wall material options
-   :align: center
+   :align: left
 
 
 
@@ -44,7 +44,7 @@ Wall A - H
 -----------
 .. figure:: images/CollectionAssignment.gif
    :alt: Assigning collections using Wall ID materials
-   :align: center
+   :align: left
 
    Assign ID_Wall materials to decide where each collection spawns.
 
@@ -134,7 +134,7 @@ Turning this option on will **deform** the objects spawned to fit the size of th
 
 .. figure:: images/UseBoolean.gif
    :alt: Use Boolean option
-   :align: center
+   :align: left
 
 
 
