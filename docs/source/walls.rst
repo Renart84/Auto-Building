@@ -77,7 +77,7 @@ Turning this option on will subdivide the faces horizontally and vertically, if 
    * - **Vertical Division**
      - Divide the faces vertically.
 
------------
+
 .. rubric:: **Deform**
 Turning this option on will **deform** the objects spawned to fit the size of the faces. Note: When doing this the instances are **applied** automatically.
 
@@ -98,7 +98,7 @@ Turning this option on will **deform** the objects spawned to fit the size of th
    * - **Subdivision**
      - Smoothing subdivision.
 
------------
+
 .. rubric:: **Options**
 
 .. list-table::
@@ -115,7 +115,7 @@ Turning this option on will **deform** the objects spawned to fit the size of th
      - When the objects create a hole in the wall using the ID_Boolean material, this option will try to keep the result, may not work all the time, Booleans can be very instable in their results.
    * - **Output Subdivision**
      - Overide Base wall subdivision result.
------------
+
 .. rubric:: **Transform**
 
 .. list-table::
