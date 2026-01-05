@@ -1,21 +1,27 @@
 Walls
 ===========
 
-Assign  materials on the faces of your object to control how the system will create your buiding.
+Assign  ID_materials on the faces of your object to control how the system will create your building.
 
 .. image:: images/MaterialAssignment.gif
 
 
-Empty Wall A and B Material
+Base
 ---------------------
 
-Your building can have 2 kind of base wall materials. To control wich one to use, simply apply the corresponding ID material, **ID_EmptyWallA** or **ID_EmptyWallB**
+Your building can have 3 kinds of base wall materials. To control wich one to use, simply apply the corresponding ID material, **ID_BaseA**, **ID_BaseB**  or **ID_BaseC**
 
 .. image:: images/EmptyMaterial.gif
 
-Wall A to G
+Each Base have multiple options:
+``**  Auto-UV? **`` If this is checked, the UV will be generated procedurally for you using the box mapping method. If this is OFF, you need to unwrap the UV manually.
+``**  UV Scale **`` Control the scale of the generated UV
+``**  Wall Subdivision **`` You may want to have the final wall with multiple subdivisions.
+``**  Wall Model **`` The walls using this base can be replaced with a geometry that will be deformed to match the shape of the faces.
+
+Wall A to H
 ------------
-The walls setting allow you to spawn 7 kind of object collection on your buildings. Represented by the letters A to G.
+The walls setting allow you to spawn 8 kinds of object collection on your buildings. Represented by the letters A to H.
 For instance, to use the collection you pick for wall A, simply assign the **ID_WallA** materials
 
 .. image:: images/CollectionAssignment.gif
