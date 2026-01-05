@@ -12,3 +12,17 @@
 .rst-content table.docutils td {
     vertical-align: top;
 }
+
+/* Left-align figures/images but do NOT let text wrap beside them */
+.rst-content figure,
+.rst-content div.figure {
+  float: none !important;      /* prevents wrap */
+  margin: 1em 0 !important;
+}
+
+.rst-content figure img,
+.rst-content div.figure img {
+  display: block;
+  margin-left: 0 !important;   /* left aligned */
+  margin-right: auto !important;
+}
