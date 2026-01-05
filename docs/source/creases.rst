@@ -1,101 +1,94 @@
 Creases
 ===========
 
+Change the **Crease** of your edges to either spawn array of objects on it or extrude it to create ledges and details.
+
 .. image:: images/CreaseSetup.gif
 
-Change the **Crease** of your edges to either spawn objects on it or extrude it to create ledges and details.
-
-.. note::
-   **The Update 1.2 adds an extra option for the Crease. The switch between both, A and B, you have to set the Crease value as this**
-
-.. image:: images/Crease1_2.jpg
 
 
-``Mean Crease``
+.. rubric:: **Crease**
+You can use the addon's interface or go in the **N panel**, **Item**, **Crease** or **Mean Crease**. Default shortcut is also **Shift E**
 
-  Quickly change the crease value of the selected edges. For each edges, if the Crease attribute is above 0, it will spawn either objects on it or extrude it following a provided profile.
+.. list-table::
+   :header-rows: 0
+   :widths: 22 78
 
-.. image:: images/CreaseSelection.gif
-
-``Thickness Multiplier``
-
-  Edit the size of all extruded Creases all together.
-
-.. image:: images/CreaseMultiplier.gif
-
-``Profile extrude material``
-
-  Material to use on the extrude edges.
-
-
-All the different creases (horizontal, vertical, or top edges) use almost the same options.
-The Top Edges is used when the crease if on the toppest edge of the face. Allowing to scatter different kind of object around the top of your building. Under the roof for instance.
-
-.. image:: images/CreaseMenu.jpg
+   * - **Mean Crease**
+     - Quickly change the crease value of the selected edges. The value from 0 to 1 and will change what category to use
+   * - **0-0.25**
+     - Horizontal or Vertical A
+   * - **0.25-0.5**
+     - Horizontal or Vertical B
+   * - **0.5-0.75**
+     - Horizontal or Vertical C
+   * - **0.75-1**
+     - Horizontal or Vertical D
 
 
+Each category will have the same options:
 
-``Profile``
+.. list-table::
+   :header-rows: 0
+   :widths: 22 78
 
-  Collection containing the profile to use for the extrude. If Crease > 0.5.
+   * - **Collection**
+     - Collection of objects to use along the edges. In **Curve Extrude** mode, you can select a single object to use as the profile.
 
-.. image:: images/CreaseProfile.jpg
+   * - **Mode**
+     - Choose how objects are distributed along edges:
 
-``Object``
+       - **Spacing**: Simple array based on distance.
+       - **Stacked**: Spacing adapts to object size.
+       - **Deformed**: Objects deform along edges and corners.
+       - **Edge Center**: Places one object at the center of each edge.
+       - **Curve Extrude**: Uses an object as a profile and extrudes it along the edges.
 
-  Collection containing the objects to spawn along the edges. If Crease < 0.5.
+   * - **Random / Seed**
+     - Randomly selects objects from the collection (controlled by the seed).
 
-``Collection order``
+   * - **Fit**
+     - Scales objects to better fit the available space.
 
-  Will randomly pick objects from the collection or pick them in order.
+   * - **Spacing**
+     - Distance between objects.
 
-.. image:: images/CreaseOrder.gif
 
-``Height``
+.. list-table::
+   :header-rows: 0
+   :widths: 22 78
 
-  Change the length or height of the objects.
+   * - **Use wall booleans**
+     - If an objects from the Walls is crossing an edge and has an boolean shape, it can cut it.
+   * - **Snap to surface**
+     - If an edge is not attached to a face, it will try to snap it to the nearest one.
+   * - **Ignore orientation**
+     - Won't allign from the original face.
+   * - **Corner split**
+     - Split the edges at the corners.
+   * - **Trim**
+     - Make the edges shorter.
+   * - **Threshold**
+     - Split angle treshold.
 
-.. image:: images/CreaseHeight.gif
+.. list-table::
+   :header-rows: 0
+   :widths: 22 78
 
-``Thickness``
+   * - **Transform**
+     - Move the objects and add random variation to them.
+   * - **Radius**
+     - For Curve extrude mode only: Change the thickness of the extrude.
+   * - **Noise intensity**
+     - For Curve extrude mode only: randomly move the curve points using a noise.
+   * - **Noise offset**
+     - For Curve extrude mode only: Slide noise position.
+   * - **Noise scale**
+     - For Curve extrude mode only: Change noise scale.
+   * - **Subdivide curves**
+     - For Curve extrude mode only: Add more points to get more noise in the curve.
 
-  Change the size of the objects.
 
-.. image:: images/CreaseThickness.gif
 
-``Z Offset``
 
-  Move the objects vertically.
 
-.. image:: images/CreaseZOffset.gif
-
-``Random position``
-
-  Move the object randomly.
-
-.. image:: images/CreaseRandomPosition.gif
-
-``Spacing``
-
-  Control the distance between the objects.
-
-.. image:: images/CreaseSpacing.gif
-
-``Deform``
-
-  The objects will be deformed to follow the curvature and avoid having gap when reaching corners of the building.
-
-.. image:: images/CreaseDeform.gif
-
-``Fit``
-
-  Will scale the objects to avoid any gaps inbetween them. Here is an example with and without the deform option.
-
-.. image:: images/CreaseFit.gif
-.. image:: images/CreaseDeformFit.gif
-
-``Center on edges``
-
-  Will spawn an object at the center of each edges. If the option Fit is On, they will be scaled to fit the edge size.
-
-.. image:: images/CreaseCentered.gif
