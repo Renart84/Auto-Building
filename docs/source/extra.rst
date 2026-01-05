@@ -8,7 +8,7 @@ Foundation
    :header-rows: 0
    :widths: 22 120
 
-   * - **Extrusion*
+   * - **Extrusion**
      - Distance of extrusion. Use 0 if you don't want extrusion.
    * - **Width**
      - Can be used to create sidewalks or edge around the bottom.
