@@ -1,76 +1,119 @@
 Walls
-===========
+=====
 
-Assign  ID_materials on the faces of your object to control how the system will create your building.
+Assign **ID materials** to the faces of your mesh to control how the system generates the building.
 
-.. image:: images/MaterialAssignment.gif
+.. figure:: images/MaterialAssignment.gif
+   :alt: Assigning ID materials to faces
+   :align: center
+
+   Assign the correct ID material to each face to control what gets generated.
 
 
 Base
----------------------
+----
 
-Your building can have 3 kinds of base wall materials. To control wich one to use, simply apply the corresponding ID material, **ID_BaseA**, **ID_BaseB**  or **ID_BaseC**
+Your building supports **three base wall material types**. To choose one, assign the corresponding ID material:
 
-.. image:: images/EmptyMaterial.gif
+- **ID_BaseA**
+- **ID_BaseB**
+- **ID_BaseC**
 
-Each Base have multiple options:
-``**  Auto-UV? **`` If this is checked, the UV will be generated procedurally for you using the box mapping method. If this is OFF, you need to unwrap the UV manually.
-``**  UV Scale **`` Control the scale of the generated UV
-``**  Wall Subdivision **`` You may want to have the final wall with multiple subdivisions.
-``**  Wall Model **`` The walls using this base can be replaced with a geometry that will be deformed to match the shape of the faces.
+.. figure:: images/EmptyMaterial.gif
+   :alt: Base wall material options
+   :align: center
+
+   Base materials (A–C) can each be configured independently.
+
+Each Base has the following options:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 22 78
+
+   * - Option
+     - Description
+   * - **Auto-UV**
+     - If enabled, UVs are generated procedurally using **box mapping**.  
+       If disabled, you must unwrap the UVs manually.
+   * - **UV Scale**
+     - Controls the scale of the generated UVs.
+   * - **Wall Subdivision**
+     - Adds subdivisions to the final wall surface.
+   * - **Wall Model**
+     - Replaces this wall with a mesh that is deformed to match the face shape.
+
 
 Wall A to H
-------------
-The walls setting allow you to spawn 8 kinds of object collection on your buildings. Represented by the letters A to H.
-For instance, to use the collection you pick for wall A, simply assign the **ID_WallA** materials
+-----------
 
-.. image:: images/CollectionAssignment.gif
+The **Wall** settings let you spawn up to **8 collections** on your building, labeled **A** through **H**.
 
-For each letter, you can find the the same set of options.
+For example, to use the collection assigned to **Wall A**, apply the material **ID_WallA** to the target faces.
 
-Select the collection you want to assign on the Wall A materials.
+.. figure:: images/CollectionAssignment.gif
+   :alt: Assigning collections using Wall ID materials
+   :align: center
 
+   Assign ID_Wall materials to decide where each collection spawns.
 
-``Use Boolean``
+Each letter (A–H) shares the same set of options.  
+First, select the collection you want to spawn for that wall slot.
 
-   If this is unchecked, face where the ID_Wall material is assigned will disappear and a random object from the collection will replace it.
+.. rubric:: Options
 
-.. image:: images/UseBoolean.gif
+.. list-table::
+   :header-rows: 1
+   :widths: 22 78
 
-``Use wall B material``
+   * - Option
+     - Description
+   * - **Use Boolean**
+     - If disabled, faces using the **ID_Wall** material are removed and replaced by a random object from the collection.
 
-   By default, the material you setup in the Empty Wall A will be used. This setting will make it use the Empty Wall B instead.
+.. figure:: images/UseBoolean.gif
+   :alt: Use Boolean option
+   :align: center
 
-.. image:: images/UseBMaterial.gif
+   * - **Use Wall B Material**
+     - By default, Wall A uses the material set in **Empty Wall A**.  
+       Enable this to use the material from **Empty Wall B** instead.
 
-``Seed``
+.. figure:: images/UseBMaterial.gif
+   :alt: Use Wall B Material option
+   :align: center
 
-   Change this setting to offer another random distribution of your objects.
+   * - **Seed**
+     - Changes the random distribution of objects.
 
-.. image:: images/WallSeed.gif
+.. figure:: images/WallSeed.gif
+   :alt: Seed option
+   :align: center
 
-``Density``
+   * - **Density**
+     - Lower values randomly remove some instances.
 
-   Reduce this number to randomly remove some of the objects.
+.. figure:: images/WallDensity.gif
+   :alt: Density option
+   :align: center
 
-.. image:: images/WallDensity.gif
+   * - **Offset**
+     - Moves spawned objects inward or outward from the face.
 
-``Offset``
+.. figure:: images/WallOffset.gif
+   :alt: Offset option
+   :align: center
 
-   Move your objects in or out of the face.
+   * - **Deform**
+     - Deforms spawned objects to match the original face shape.
 
-.. image:: images/WallOffset.gif
+.. figure:: images/WallDeform.gif
+   :alt: Deform option
+   :align: center
 
-``Deform``
+   * - **Inset**
+     - Available only when **Deform** is enabled. Insets the original face before deformation to make the spawned object smaller.
 
-   Deform the objects to fit the original face shape.
-
-.. image:: images/WallDeform.gif
-
-``Inset``
-
-   Option only available if Deform is activated. This option allow to inset the original face before applying the deform. Making your object smaller.
-
-.. image:: images/WallInset.gif
-
-
+.. figure:: images/WallInset.gif
+   :alt: Inset option
+   :align: center
