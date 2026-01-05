@@ -67,6 +67,7 @@ Each letter (A–H) shares the same set of options.
 
 .. rubric:: **Auto-Subdivide**
 Turning this option on will subdivide the faces horizontally and vertically, if the space allows it.
+
 .. list-table::
    :header-rows: 0
    :widths: 22 120
@@ -79,6 +80,7 @@ Turning this option on will subdivide the faces horizontally and vertically, if 
 
 .. rubric:: **Deform**
 Turning this option on will **deform** the objects spawned to fit the size of the faces. Note: When doing this the instances are **applied** automatically.
+
 .. list-table::
    :header-rows: 0
    :widths: 22 120
@@ -98,6 +100,7 @@ Turning this option on will **deform** the objects spawned to fit the size of th
 
 
 .. rubric:: **Options**
+
 .. list-table::
    :header-rows: 0
    :widths: 22 120
@@ -114,6 +117,7 @@ Turning this option on will **deform** the objects spawned to fit the size of th
      - Overide Base wall subdivision result.
 
 .. rubric:: **Transform**
+
 .. list-table::
    :header-rows: 0
    :widths: 22 120
