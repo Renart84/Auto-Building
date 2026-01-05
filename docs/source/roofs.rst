@@ -50,19 +50,19 @@ Apply the ID_RoofSlope to remove the parapet and scatter Rooftiles objects on it
    * - **Roof Slope material**
      - Material to apply, UV are based on the flat roof's UV.
    * - **Auto-UV**
-     - Material to apply, UV are based on the flat roof's UV.
+     - Generate the UV automatically based on a Box Mapping method.
    * - **UV Scale**
-     - Material to apply, UV are based on the flat roof's UV.
+     - Generated UV Scale.
    * - **Z Offset**
-     - Material to apply, UV are based on the flat roof's UV.
+     - Translate on Z axis.
    * - **Subdivide Roof**
-     - Material to apply, UV are based on the flat roof's UV.
+     - Round the roof.
    * - **Extension**
-     - Material to apply, UV are based on the flat roof's UV.
+     - Extend the roof.
    * - **Extension Angle**
-     - Material to apply, UV are based on the flat roof's UV.
+     - Extention angle.
    * - **Extension Normal/Flat**
-     - Material to apply, UV are based on the flat roof's UV.
+     - Extention flat or following roof normal.
    * - **Roof style**
      - Different mode can give different result and performance depending on what you are trying to achieve:
 
