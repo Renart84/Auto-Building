@@ -19,6 +19,7 @@ Foundation
 
 ----
 
+
 Support
 --------
 Automatic support, spawning on down facing faces.
@@ -48,6 +49,7 @@ Automatic support, spawning on down facing faces.
 
 ----
 
+
 Facade Dressing
 ---------------
 Scatter objects on the building's facades
@@ -73,6 +75,7 @@ Scatter objects on the building's facades
    * - **Random Transform**
      -  Add variation.
 
+
 .. rubric:: **Instance on Vertex**
 
 .. list-table::
@@ -96,6 +99,7 @@ Scatter objects on the building's facades
    * - **Random Transform**
      -  Add variation.
 
+
 .. rubric:: **Instance on Vertex**
 Allow to spawn objects on specific vertex
 
@@ -111,6 +115,7 @@ Allow to spawn objects on specific vertex
      -  Change random output.
    * - **Align to faces**
      -  Sample nearest face to get the object rotation.
+
 
 .. rubric:: **Decals**
 Use to add local decals projected on the surface
@@ -131,6 +136,7 @@ Use to add local decals projected on the surface
      -  Change random output.
 
 ----
+
 
 Interior
 --------
@@ -165,6 +171,7 @@ Generate a simple interior model. Layout of the room and object distribution is 
 
 ----
 
+
 Destruction
 --------
 Simple destruction genration using a boolean shape
@@ -193,6 +200,7 @@ Simple destruction genration using a boolean shape
      -  Manually change the boolean position, can be edited directly in the viewport with the gizmo.
 
 ----
+
 
 Deformation
 --------
