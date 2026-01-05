@@ -56,7 +56,7 @@ Each letter (A–H) shares the same set of options.
 
 .. list-table::
    :header-rows: 0
-   :widths: 22 78
+   :widths: 22 120
 
    * - **Collection**
      - Chose the collection that will be used for each ID material corresponding to this wall.
@@ -65,21 +65,20 @@ Each letter (A–H) shares the same set of options.
    * - **Seed**
      - Change the objects selected to be spawned.
 
+.. rubric:: **Auto-Subdivide**
+Turning this option on will subdivide the faces horizontally and vertically, if the space allows it.
 .. list-table::
    :header-rows: 0
-   :widths: 22 78
+   :widths: 22 120
 
-   * - **Auto-Subdivide**
-     - Turning this option on will subdivide the faces horizontally and vertically, if the space allows it.
    * - **Horizontal Division**
      - Divide the faces horizontally.
    * - **Vertical Division**
      - Divide the faces vertically.
 
 
-.. rubric:: Deform
+.. rubric:: **Deform**
 Turning this option on will **deform** the objects spawned to fit the size of the faces. Note: When doing this the instances are **applied** automatically.
-
 .. list-table::
    :header-rows: 0
    :widths: 22 120
@@ -97,9 +96,11 @@ Turning this option on will **deform** the objects spawned to fit the size of th
    * - **Subdivision**
      - Smoothing subdivision.
 
+
+.. rubric:: **Options**
 .. list-table::
    :header-rows: 0
-   :widths: 22 78
+   :widths: 22 120
 
    * - **Density**
      - At 1, all the assigned face will spawn an object from the collection, reducing the density will randomly remove some of them.
@@ -112,9 +113,10 @@ Turning this option on will **deform** the objects spawned to fit the size of th
    * - **Output Subdivision**
      - Overide Base wall subdivision result.
 
+.. rubric:: **Transform**
 .. list-table::
    :header-rows: 0
-   :widths: 22 78
+   :widths: 22 120
 
    * - **Reset origins**
      - Placement of the object's origin is very important, but you can center automatically with this option.
