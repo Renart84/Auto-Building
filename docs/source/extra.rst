@@ -17,6 +17,7 @@ Foundation
    * - **Material**
      - Material to use on the foundation.
 
+----
 
 Support
 --------
@@ -45,7 +46,7 @@ Automatic support, spawning on down facing faces.
    * - **Support Pillar subdivision*
      -  If Fit Edge is off, will add more pillars.
 
-
+----
 
 Facade Dressing
 ---------------
@@ -129,6 +130,8 @@ Use to add local decals projected on the surface
    * - **Seed**
      -  Change random output.
 
+----
+
 Interior
 --------
 Generate a simple interior model. Layout of the room and object distribution is really random and have no logic. Mostly to have something inside in case you need.
@@ -160,7 +163,7 @@ Generate a simple interior model. Layout of the room and object distribution is 
    * - **UV Scale**
      -  Size of the generated UV.
 
-
+----
 
 Destruction
 --------
@@ -189,6 +192,7 @@ Simple destruction genration using a boolean shape
    * - **Transform**
      -  Manually change the boolean position, can be edited directly in the viewport with the gizmo.
 
+----
 
 Deformation
 --------
