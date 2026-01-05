@@ -17,6 +17,9 @@ Your building supports **three base wall material types**. To choose one, assign
 Each Base has the following options:
 
 .. list-table::
+   :header-rows: 0
+   :widths: 22 78
+
    * - **Material**
      - The material that will be applied on the faces.  
    * - **Auto-UV**
