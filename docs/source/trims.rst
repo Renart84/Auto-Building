@@ -9,7 +9,7 @@ There are **ten Trim channels, A to J**. Each channel has a **Horizontal** and a
 Assigning edges
 ---------------
 
-Trims are driven by the **edge Crease** of your base mesh. In Edit Mode, select edges and click a Trim button. It sets the crease value for that channel. The **Clear** button removes it.
+In **Edit Mode**, select the edges (``Alt+click`` selects a whole edge loop) and click a **Trim** button: the trim appears on them. The **Clear** button removes it.
 
 .. image:: images/features/trims_assign.gif
    :class: feature-gif
@@ -169,7 +169,10 @@ A dedicated object on the corners, on top of the trim.
 Vertical
 --------
 
-The vertical part has the same settings as the horizontal one (collection, random, spacing, fit…), plus **Trim Start / Trim End** to shorten the vertical edges at the bottom or top.
+The vertical part has the same settings as the horizontal one (collection, random, spacing, fit…), plus two of its own:
+
+``Trim Start`` / ``Trim End``
+  Shortens the vertical edges at the bottom or at the top.
 
 .. image:: images/features/trims_vertical.gif
    :class: feature-gif
