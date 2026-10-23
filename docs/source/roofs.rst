@@ -139,17 +139,32 @@ Scatters objects on the roof: chimneys, vents, antennas, AC units…
 Modular
 -------
 
-Builds the roof from blocks, like Lego: middle, side, outer corner and inner corner pieces. All blocks must share the same cube size. Check the example objects to see how they are built.
+Builds the roof from four blocks, like Lego. The blocks are placed on a grid of **Cell Size** and picked automatically to follow the outline of the roof.
+
+.. image:: images/modular_roof_pieces.png
+   :alt: The four modular blocks and how they assemble
+
+.. note::
+   The modular roof appears on **up-facing horizontal faces** that have the ``ID_RoofSlope`` material (the **Slope** button).
+
+``Middle`` / ``Side`` / ``Corner Out`` / ``Corner In``
+  The four block objects. Model them all on the same cube size; check the example objects to see how they are built.
+
+``Cell Size`` / ``Scale`` / ``Offset``
+  Size of one grid cell (should match your blocks), overall scale and height.
+
+Edit the building and the roof follows: move a wall or extrude a part, and the right blocks fill the new shape.
 
 .. image:: images/features/roof_modular.gif
    :class: feature-gif
-   :alt: Modular roof
+   :alt: Modular roof following mesh edits
 
-``Middle`` / ``Side`` / ``Corner Out`` / ``Corner In``
-  The four block objects.
+``Connect To Walls``
+  When a roof sits against a taller wall, the sides touching that wall are joined to it instead of sloping down.
 
-``Cell Size`` / ``Scale`` / ``Offset Z``
-  Size of one block, overall scale and height.
+.. image:: images/features/roof_modular_connect-walls.gif
+   :class: feature-gif
+   :alt: Connect To Walls
 
 
 Gutter
