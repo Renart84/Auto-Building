@@ -30,7 +30,11 @@ Noise Displacement
 Module Grid
 -----------
 
-Snaps the base mesh to a regular grid before the building is generated. Handy to clean up a roughly modelled base.
+Snaps the base mesh to a regular grid before the building is generated: walls land on multiples of **Module X** and floors on multiples of **Floor Height**, so windows and floors always line up. Model the base roughly, the grid cleans it up.
+
+.. image:: images/features/extra_deformation_grid.gif
+   :class: feature-gif
+   :alt: Module Grid
 
 ``Grid Snap``
   Turns the grid snapping on.
