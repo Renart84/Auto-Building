@@ -1,147 +1,226 @@
 Walls
 =====
 
-Assign **ID materials** to the faces of your mesh to control how the system generates the building.
+Walls are driven by **ID materials**. Select faces on your base mesh, click a button in the **Walls** panel, and the matching ID material is assigned to them. You can also assign the materials by hand through the material slots.
 
-.. figure:: images/MaterialAssignment.gif
-   :alt: Assigning ID materials to faces
-   :align: left
+There are two kinds of wall:
 
-   Assign the correct ID material to each face to control where and what gets generated.
+- **Base A–D** – the plain surface of the building (plaster, bricks, wood…).
+- **Wall A–J** – objects spawned on the faces (windows, doors, balconies…), with a Base behind them.
 
-----
-
-Base
-----
-
-Your building supports **three base wall material types**. To choose one, assign the corresponding ID material: **ID_BaseA**, **ID_BaseB**, **ID_BaseC**
-Each Base has the following options:
-
-.. list-table::
-   :header-rows: 0
-   :widths: 22 78
-
-   * - **Material**
-     - The material that will be applied on the faces.  
-   * - **Auto-UV**
-     - If enabled, UVs are generated procedurally using **box mapping**.  
-       If disabled, you must unwrap the UVs manually.
-   * - **UV Scale**
-     - Controls the scale of the generated UVs.
-   * - **Wall Subdivision**
-     - Adds subdivisions to the final wall surface.
-   * - **Wall Model**
-     - Replaces this wall with a mesh that is deformed to match the face shape.
-
-.. figure:: images/EmptyMaterial.gif
-   :alt: Base wall material options
-   :align: left
+.. tip::
+   Each letter row has an **assign button** (the greyed letter on the left) and a **material or collection field** on the right. Click the small arrow to unfold its settings.
 
 
+Base A–D
+--------
 
-----
+Up to four base wall styles. Each one has the same settings.
 
-Wall A - H
------------
-.. figure:: images/CollectionAssignment.gif
-   :alt: Assigning collections using Wall ID materials
-   :align: left
+.. image:: images/features/walls_base_assign.gif
+   :class: feature-gif
+   :alt: Assigning Base B to faces
 
-   Assign ID_Wall materials to decide where each collection spawns.
+``Assign``
+  In Edit Mode, select faces and click **Base A** to **Base D** to give them that style (assigns ``ID_BaseA`` to ``ID_BaseD``).
 
-The **Wall** settings let you spawn up to **8 collections** on your building, labeled **A** through **H**.
+``Material``
+  Material of the base wall, in the field next to the button.
 
-For example, to use the collection assigned to **Wall A**, apply the material **ID_WallA** to the target faces.
+.. image:: images/features/walls_base_material.gif
+   :class: feature-gif
+   :alt: Base material
 
-Each letter (A–H) shares the same set of options.  
+``Auto-UV`` / ``UV Scale``
+  Generates UVs on the wall automatically. UV Scale sets the texture size.
 
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
+.. image:: images/features/walls_base_auto-uv.gif
+   :class: feature-gif
+   :alt: Auto-UV on and off
 
-   * - **Collection**
-     - Chose the collection that will be used for each ID material corresponding to this wall.
-   * - **Base**
-     - Chose what kind of base the wall will have, following the settings seen in the **Base** options above.
-   * - **Seed**
-     - Change the objects selected to be spawned.
+.. image:: images/features/walls_base_uv-scale.gif
+   :class: feature-gif
+   :alt: UV Scale
 
-----
+``Wall Subdivision``
+  Cuts the wall faces into smaller faces. Useful for deformation and destruction.
 
-.. rubric:: **Auto-Subdivide**
-Turning this option on will subdivide the faces horizontally and vertically, if the space allows it.
+.. image:: images/features/walls_base_wall-subdivision.gif
+   :class: feature-gif
+   :alt: Wall Subdivision
 
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
+``Wall Model``
+  Optional collection of wall panels (bricks, planks, stones…) instanced on the surface instead of a plain material.
 
-   * - **Horizontal Division**
-     - Divide the faces horizontally.
-   * - **Vertical Division**
-     - Divide the faces vertically.
+.. image:: images/features/walls_base_wall-model.gif
+   :class: feature-gif
+   :alt: Wall Model collection
 
-----
+``Keep Base Wall``
+  Keeps the original flat wall under the Wall Model pieces.
 
-.. rubric:: **Deform**
-Turning this option on will **deform** the objects spawned to fit the size of the faces. Note: When doing this the instances are **applied** automatically.
-
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
-
-   * - **Constant scale**
-     - The thickness of the objects are locked and don't depend on the size of the faces.
-   * - **Scale**
-     - Change the thickness of the objects.
-   * - **Inset**
-     - Will inset the original faces to make the objects smaller instead of taking the whole face.
-   * - **Offset**
-     - Will move the objects **Inward** or **Outward**.
-   * - **Smooth**
-     - Subdivide the faces to avoid sharp corners
-   * - **Subdivision**
-     - Smoothing subdivision.
-
-----
-
-.. rubric:: **Options**
-
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
-
-   * - **Density**
-     - At 1, all the assigned face will spawn an object from the collection, reducing the density will randomly remove some of them.
-   * - **Random Mirror**
-     - Randomly flip the objects to create more variations.
-   * - **Keep Wall**
-     - Keep the original wall surface and apply the chosen **Base** to it, turning it off will remove the wall.
-   * - **Keep Boolean Faces**
-     - When the objects create a hole in the wall using the ID_Boolean material, this option will try to keep the result, may not work all the time, Booleans can be very instable in their results.
-   * - **Output Subdivision**
-     - Overide Base wall subdivision result.
-
-----
-
-.. rubric:: **Transform**
-
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
-
-   * - **Reset origins**
-     - Placement of the object's origin is very important, but you can center automatically with this option.
-   * - **Snapping**
-     - Will always place the object at the center of the faces, at the bottom, or at the top, no matter the face size.
-   * - **Force Vertical**
-     - Ignore face orientation to have the objects always vertical.
-   * - **Offset**
-     - Move the objects relatively to their faces, you can also add some randomness and change its seed.
+.. image:: images/features/walls_base_keep-base-wall.gif
+   :class: feature-gif
+   :alt: Keep Base Wall
 
 
-.. figure:: images/UseBoolean.gif
-   :alt: Use Boolean option
-   :align: left
+Wall A–J
+--------
 
+Up to ten collections of objects (windows, doors, shop fronts…). All letters share the same settings.
 
+.. image:: images/features/walls_wall_assign.gif
+   :class: feature-gif
+   :alt: Assigning Wall A to faces
 
+``Assign``
+  Select faces and click **Wall A** to **Wall J** (assigns ``ID_WallA`` to ``ID_WallJ``). One object is placed on each face.
+
+``Collection``
+  Collection of objects spawned on the faces. If it holds several objects, one is picked at random per face.
+
+.. image:: images/features/walls_wall_collection.gif
+   :class: feature-gif
+   :alt: Wall collection
+
+.. tip::
+   **Cutting holes:** give a part of your window or door model the ``ID_Boolean`` material and it cuts a hole in the wall. Use **Setup › Assign Boolean Faces** in Edit Mode on your part. See :ref:`Building parts › Booleans <part-booleans>`.
+
+``Base``
+  Which Base (A–D) fills the wall around and behind the objects.
+
+.. image:: images/features/walls_wall_base.gif
+   :class: feature-gif
+   :alt: Base behind the wall objects
+
+``Seed``
+  Picks another random object per face.
+
+.. image:: images/features/walls_wall_seed.gif
+   :class: feature-gif
+   :alt: Seed
+
+Auto-Subdivide
+~~~~~~~~~~~~~~
+
+Splits large faces into a grid so several objects fit on one face.
+
+.. image:: images/features/walls_wall_auto-subdivide.gif
+   :class: feature-gif
+   :alt: Auto-Subdivide
+
+``Horizontal Division`` / ``Vertical Division``
+  Target size of the cells in each direction.
+
+``Horizontal / Vertical Edges Crease``
+  Gives the new edges a crease, so a Trim can follow them (see :doc:`trims`).
+
+Deform
+~~~~~~
+
+Bends each object to the exact shape of its face (great for slanted or irregular faces).
+
+.. image:: images/features/walls_wall_deform.gif
+   :class: feature-gif
+   :alt: Deform
+
+``Constant Scale`` / ``Scale``
+  Keeps the object depth constant instead of scaling it with the face.
+
+``Inset``
+  Shrinks the face before deforming, leaving a border of wall around the object.
+
+``Smooth`` / ``Subdivision``
+  Adds resolution so the object follows the face more smoothly.
+
+Options
+~~~~~~~
+
+``Density``
+  Lower it to randomly remove objects.
+
+.. image:: images/features/walls_wall_density.gif
+   :class: feature-gif
+   :alt: Density
+
+``Random Mirror``
+  Randomly mirrors objects for variation.
+
+.. image:: images/features/walls_wall_random-mirror.gif
+   :class: feature-gif
+   :alt: Random Mirror
+
+``Combine Co-Planar``
+  Merges neighbouring faces that lie on the same plane, so they get one object instead of one per face.
+
+.. image:: images/features/walls_wall_combine-coplanar.gif
+   :class: feature-gif
+   :alt: Combine Co-Planar
+
+``Keep Wall``
+  Keeps the base wall face behind the object.
+
+.. image:: images/features/walls_wall_keep-wall.gif
+   :class: feature-gif
+   :alt: Keep Wall
+
+``Keep Boolean Faces``
+  Lines the holes cut by the ``ID_Boolean`` shapes with a thin wall (a reveal), so openings look thick.
+
+``Output Subdivision``
+  Subdivides the remaining wall so it can bend with Deformation or Destruction.
+
+.. image:: images/features/walls_wall_output-subdivision.gif
+   :class: feature-gif
+   :alt: Output Subdivision
+
+``Keep in Bake Mesh``
+  Includes these objects when you bake the building to a mesh (see :doc:`baking`).
+
+Transform
+~~~~~~~~~
+
+``Snapping``
+  Where the object sits on its face: **Center**, **Bottom** or **Top**.
+
+.. image:: images/features/walls_wall_snapping.gif
+   :class: feature-gif
+   :alt: Snapping
+
+With **Bottom**, a door stays on the ground even when the wall gets taller, while a centred window moves up with the middle of the face.
+
+.. image:: images/features/walls_wall_snapping-bottom.gif
+   :class: feature-gif
+   :alt: Snapping Bottom on a taller wall
+
+``Offset X / Y / Z`` / ``Offset Random`` / ``Offset Seed``
+  Moves the objects on each axis (Y pushes them in or out of the wall), with an optional random amount.
+
+.. image:: images/features/walls_wall_offset.gif
+   :class: feature-gif
+   :alt: Offset
+
+``Reset Origins``
+  Ignores the object's own origin when placing it.
+
+``Force Vertical``
+  Keeps objects upright on slanted walls instead of leaning with the face.
+
+.. image:: images/features/walls_wall_force-vertical.gif
+   :class: feature-gif
+   :alt: Force Vertical
+
+Corner Pieces
+~~~~~~~~~~~~~
+
+Places a dedicated object on the wall corners, for example corner stones or quoins.
+
+.. image:: images/features/walls_wall_corner-pieces.gif
+   :class: feature-gif
+   :alt: Corner Pieces
+
+``Corner In`` / ``Corner Out``
+  Objects used on inner and outer corners.
+
+``Corner Spacing`` / ``Corner Angle Threshold`` / ``Corner Clearance``
+  Spacing along the corner, which angles count as a corner, and the gap kept free around it.

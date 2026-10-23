@@ -3,11 +3,11 @@ Auto-Base
 
 .. image:: images/AutoBaseVariations.gif
 
-The Auto-Base Geometry Node is a tool to use along the Auto-Building. It will help you generate a base for your buildings. It won't be as good as a manual modelling but it can help you create simple variations or have a starting point.
+Auto-Base is a companion Geometry Nodes tool for Auto-Building. It generates a base mesh for your buildings — it won't beat manual modeling, but it's great for quick variations or as a starting point.
 
-Simply use this Geometry node modifier Auto-Base before the Auto-Building modifier. that you use normally.
+Simply add the **Auto-Base** Geometry Nodes modifier *before* the Auto-Building modifier you normally use.
 
-There is no custom interface for that but the setting are not that many and are (I think) simple enough. But here are some gid to see what you can do:
+There is no custom interface for it, but the settings are few and simple enough. Here are some GIFs showing what you can do:
 
 .. image:: images/AutoBaseSeeds.gif
 
@@ -16,4 +16,3 @@ There is no custom interface for that but the setting are not that many and are 
 .. image:: images/AutoBaseSettings.gif
 
 .. image:: images/AutoBaseRoofs.gif
-

@@ -1,31 +1,33 @@
 Installation
-=====
+============
 
 .. _installation:
 
-Installation
-------------
+Addon
+-----
 
-Auto-Building comes with a custom interface to simplify the creation process. But is not mandatory for the generated building to work.
-
+Auto-Building comes with a custom interface that simplifies the creation process.
 To install it, go to:
-**Top menu** -> **Edit** -> **Preferences** -> **Addons** -> **Install**.
+**Top menu** → **Edit** → **Preferences** → **Add-ons** → **Install**.
 
-Select the **Addon zip file** and make sure the Auto-Building addon is checked.
+Select the **addon zip file** and make sure the Auto-Building addon is enabled.
 
 .. image:: images/Instalation.jpg
 
-Now a new tab called Auto-Building will appear in the viewport right panel (shortcut N)
-This tab will show you the Auto-Building Geometry Node of your building whenever you select one.
-It will also allow you to create a starting base with a simple template. With the correct Materials setup.
+A new tab called **Auto-Building** now appears in the viewport side panel (shortcut ``N``).
+This tab shows the Auto-Building Geometry Nodes settings of whichever building you select.
+It also lets you create a starting base from a simple template, with all the materials already set up.
 
-.. image:: images/StartBuilding.png
+.. image:: images/StartBuilding.jpg
 
 
 Asset Browser
-----------------
+-------------
 
+The system also comes with a set of example buildings. They are marked as Assets, so you can add the Presets blend file to your own Asset Browser for quick access.
 
-The system also come with some building exanples for you to use. They are marked as Asset so you can add the Preset blender file in your own asset browser if you wish to access them easily.
+To install them, simply copy the Auto-Building Presets blend file into your personal library folder, then add that folder as a new file path in your Asset Browser preferences:
 
-To install them. Simply copy the Auto-Build Preset Blend file to your personal library and create a new file path for your asset browser in your Preferences.
+.. image:: images/AssetBrowser_Install.jpg
+
+.. image:: images/AssetBrowser.jpg

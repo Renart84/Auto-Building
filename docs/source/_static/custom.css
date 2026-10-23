@@ -1,28 +1,37 @@
-/* Make the main content area wider */
-.wy-nav-content {
-    max-width: 1400px; /* try 1200–1400px */
+/* Auto-Building docs customization */
+
+/* Setting names: definition-list terms rendered as clear chips */
+article dl:not(.field-list) > dt {
+    margin-top: 1.1em;
 }
 
-/* Improve table readability */
-.wy-table-responsive table td {
-    white-space: normal !important;
+article dl:not(.field-list) > dt > code.literal {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.25em 0.7em;
+    border-radius: 6px;
+    background: var(--color-api-background);
+    color: var(--color-brand-content);
+    border: 1px solid var(--color-background-border);
 }
 
-/* Improve list-table wrapping */
-.rst-content table.docutils td {
-    vertical-align: top;
+article dl:not(.field-list) > dd {
+    margin-top: 0.35em;
+    margin-bottom: 0.9em;
 }
 
-/* Left-align figures/images but do NOT let text wrap beside them */
-.rst-content figure,
-.rst-content div.figure {
-  float: none !important;      /* prevents wrap */
-  margin: 1em 0 !important;
+/* Slightly tone down image top/bottom spacing */
+article img {
+    margin: 0.6em 0 1em 0;
+    border-radius: 6px;
 }
 
-.rst-content figure img,
-.rst-content div.figure img {
-  display: block;
-  margin-left: 0 !important;   /* left aligned */
-  margin-right: auto !important;
+/* Feature GIFs: keep them a readable size and centred */
+article img.feature-gif {
+    display: block;
+    max-width: 100%;
+    width: 760px;
+    margin: 0.6em auto 1.2em auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }

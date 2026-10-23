@@ -1,250 +1,196 @@
 Roofs
-============
+=====
 
-Buildings can have 2 kind of roof, Flat or Slope.
+Roofs appear automatically on the top faces of the building: flat faces become **Flat** roofs, slanted faces become **Slope** roofs. You can force the type on any face with the **Flat** and **Slope** buttons (they assign ``ID_RoofFlat`` / ``ID_RoofSlope``).
+
 
 Flat
-------
-
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
-
-   * - **Auto-Flat Roof**
-     - Will detect top facing faces and treat theam as flat roof.
-   * - **Roof Material**
-     - Material to apply.
-   * - **Auto-UV**
-     - Automatically unwrap the roof using Box mapping method.
-   * - **UV Scale**
-     - Scale of the generated UV.
-
-.. rubric:: **Parapet**
-Turning this option on will subdivide the faces horizontally and vertically, if the space allows it.
-
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
-
-   * - **Parapet material**
-     - Material to apply, UV are based on the flat roof's UV.
-   * - **Height**
-     - Height of the parapet.
-   * - **Thickness**
-     - Thickness of the parapet.
-   * - **Offset**
-     - Push the parapet in or out.
-
 ----
+
+``Material``
+  Material of the flat roof surface, next to the **Flat** button.
+
+.. image:: images/features/roof_flat_material.gif
+   :class: feature-gif
+   :alt: Flat roof material
+
+``Auto-Flat Roof`` / ``Height``
+  Detects flat roofs automatically, and moves the roof surface up or down.
+
+``Auto-UV`` / ``UV Scale``
+  Automatic UVs on the roof and their size.
+
+Parapet
+~~~~~~~
+
+A low wall around the flat roof.
+
+.. image:: images/features/roof_flat_parapet.gif
+   :class: feature-gif
+   :alt: Parapet
+
+``Height`` / ``Thickness``
+  Size of the parapet.
+
+``Inset`` / ``Offset``
+  Moves it inward or outward from the roof border.
+
+``Profile``
+  Optional curve used as the parapet profile.
+
+``Material`` / ``UV Scale``
+  Material and UV size of the parapet.
+
 
 Slope
--------
-Apply the ID_RoofSlope to remove the parapet and scatter Rooftiles objects on it.
+-----
 
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
+``Material`` / ``Auto-UV`` / ``UV Scale``
+  Material of the roof surface under the tiles.
 
-   * - **Auto-Slope Roof**
-     - Automatically treat top facing faces that are not perfectly flat as slope roof.
-   * - **Roof Slope material**
-     - Material to apply, UV are based on the flat roof's UV.
-   * - **Auto-UV**
-     - Generate the UV automatically based on a Box Mapping method.
-   * - **UV Scale**
-     - Generated UV Scale.
-   * - **Z Offset**
-     - Translate on Z axis.
-   * - **Subdivide Roof**
-     - Round the roof.
-   * - **Extension**
-     - Extend the roof.
-   * - **Extension Angle**
-     - Extention angle.
-   * - **Extension Normal/Flat**
-     - Extention flat or following roof normal.
-   * - **Roof style**
-     - Different mode can give different result and performance depending on what you are trying to achieve:
+``Auto-Slope`` / ``Threshold``
+  Detects slope roofs automatically, from this angle.
 
-       - **Quick Profile**: Doesn't spaw tile but use a profile object to create the roof, The profile can be procedurally generated.
-       - **Quick Distribution**: Simple tile distribution as array.
-       - **Random**: Random distribution.
-       - **UV (Auto)**: Use UV to distribute the tile grid.
-       - **UV (Manual)**: Use UV to distribute the tile grid, but the UV needs to be done manually.
-       - **Slices**: Vertical slicing method.
-       - **Subdivision**: Subdivide the face to add the files.
-       - **Precise**: Will allign the tile as array and cut the tile sticking out. Can be heavy on performance.
+``Keep Original Face``
+  Keeps the roof surface under the tiles.
 
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
+``Extension`` / ``Extension Angle`` / ``Extension Normal/Flat``
+  Extends the roof past the walls (eaves), with its angle and direction.
 
-   * - **Roof tile**
-     - Collection used for the roof tiles.
-   * - **Ordered/Random**
-     - Use object order from the collection or randomly pick them.
-   * - **Amount**
-     - Randomly remove tiles.
-   * - **Density**
-     - Number of lines of tiles on both axis.
-   * - **Random Transform**
-     - Add random transformation.
+.. image:: images/features/roof_slope_extension.gif
+   :class: feature-gif
+   :alt: Roof extension
 
-.. rubric:: **Mask**
-Use a mask to control the tile distribution and create patterns.
+``Z Offset`` / ``Subdivide Roof`` / ``Include Wall Booleans``
+  Raises the roof, adds resolution, and lets wall boolean shapes cut it.
 
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
+Roof Style
+~~~~~~~~~~
 
-   * - **Type**
-       - **Noise**: Random noise pattern
-       - **Y Wave**: Alternating horizontal lines
-       - **Checker**: Square checker
-       - **Image**: Use black and while image
-   * - **Contrast**
-     - Collection used for the roof tiles.
-   * - **Scale**
-     - Collection used for the roof tiles.
-   * - **Variation**
-     - Collection used for the roof tiles.
-   * - **Image**
-     - Collection used for the roof tiles.
+How the tiles are laid on the slope.
 
-.. rubric:: **Use Crease**
-If a roof edge has a crease = 1, it will spawn an array of object on it.
+.. image:: images/features/roof_slope_style.gif
+   :class: feature-gif
+   :alt: Roof styles
 
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
+``Roof Style``
+  **Quick Profile**, **Quick Distribution**, **Random**, **UV (Auto)**, **UV (Manual)**, **Slices**, **Subdivision** or **Precise**. The two *Quick* styles are the fastest; the others give more control on irregular roofs.
 
-   * - **Crease Collection**
-     - Collection used for the crease.
-   * - **Crease End Collection**
-     - Collection used for the tip of crease.
-   * - **Spacing**
-     - Collection used for the tip of crease.
-   * - **Translate Z**
-     - Move the creases up or down.
-   * - **Extend**
-     - Can make the crease longer or shorter.
+``Roof Tile``
+  Collection of tile objects.
 
-.. rubric:: **Procedural Top-Edge**
-Will try to generate an object along the top edge of the slope roof.
+``Randomize`` / ``Seed`` / ``Amount``
+  Random tile choice, and Amount below 100% removes some tiles.
 
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
+``Density``
+  Number of tiles across and along the slope.
 
-   * - **Material**
-     - Collection used for the crease.
-   * - **UV Scale**
-     - Scale of the UV.
-   * - **Radius**
-     - Size of the mesh.
-   * - **Resolution**
-     - Number of division to make it more or less round.
-   * - **Thickness**
-     - Thickness of the mesh.
-   * - **Translate and Scale**
-     - Transform the mesh.
-   * - **Extend**
-     - Can make the crease longer or shorter.
+``Ignore Incline`` / ``Stagger Rows`` / ``Stretch Tiles``
+  Keeps tiles level, offsets every other row, or stretches tiles to fill gaps.
 
-----
+``Random Translation`` / ``Random Rotation`` / ``Random Scale`` / ``Random Flip X/Y/Z``
+  Random variation per tile, for an older, irregular look.
+
+Quick Profile
+~~~~~~~~~~~~~
+
+Builds the roof covering from a profile instead of individual tiles. Very light, ideal for background buildings.
+
+.. image:: images/features/roof_slope_quick-profile.gif
+   :class: feature-gif
+   :alt: Quick Profile
+
+``Roof Profile`` / ``Thickness`` / ``Tile Width`` / ``Tile Height``
+  Optional custom profile, or the size of the procedural one.
+
+Mask
+~~~~
+
+Removes or varies tiles with a pattern (**Noise**, **Y Wave**, **Checker** or an **Image**), for damaged or patched roofs.
+
+Procedural Top-Edge
+~~~~~~~~~~~~~~~~~~~
+
+A ridge cap generated along the top edge of the slope: material, radius, thickness, height and extension past the ends.
+
 
 Dressing
--------------
-Will scatter a collection of object on the flat roof.
+--------
 
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
+Scatters objects on the roof: chimneys, vents, antennas, AC units…
 
-   * - **Collection**
-     - Collection used for the scattering.
-   * - **Density**
-     - Distance between objects.
-   * - **Distance from edge**
-     - Move objects away from edges.
-   * - **Seed**
-     - Randomize the scattering.
-   * - **Include Slope**
-     - Scatter also on Slope roof.
-   * - **Dressing collection**
-     - Collection used for the scattering.
-``Dressing collection`` 
+.. image:: images/features/roof_dressing.gif
+   :class: feature-gif
+   :alt: Roof dressing
 
-  Collection of object to use to scatter them on the roof.
+``Collection`` / ``Mode``
+  Objects to scatter, by **Number of Points** or by **Density**.
 
-``Dressing density`` 
+``Distance From Edges`` / ``Seed``
+  Keeps objects away from the roof borders, and changes the layout.
 
-  Density of object to scatter on the roof, the smaller the number the less object .
+``Include Slope`` / ``Include Top Facing Walls``
+  Also scatters on slope roofs and on other top-facing faces.
 
-``Seed``
+``Random Translate / Rotation / Scale``
+  Random variation per object, each with its own seed.
 
-  Randomize scattered object.
-
-``Include Slope``
-
-  If you want to keep your objects only on flat roof or include the slopes.
-
-----
 
 Modular
---------
+-------
 
-.. image:: images/RoofModular.gif
+Builds the roof from blocks, like Lego: middle, side, outer corner and inner corner pieces. All blocks must share the same cube size. Check the example objects to see how they are built.
 
-The Modular roof system is in beta but can be useful in some case. It works like Lego blocks.
-The position of the block in the collection is important. And all the blocks needs to have the same cubic dimension. Please look at the Example objects to see how it works.
-Here is the position list:
-0 - Center block
-1 - Side block
-2 - Corner out block
-3 - Corner in block
+.. image:: images/features/roof_modular.gif
+   :class: feature-gif
+   :alt: Modular roof
 
+``Middle`` / ``Side`` / ``Corner Out`` / ``Corner In``
+  The four block objects.
 
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
+``Cell Size`` / ``Scale`` / ``Offset Z``
+  Size of one block, overall scale and height.
 
-   * - **Modular**
-     -  Collection of modular roof piece.
-   * - **Density**
-     -  Will add more block to cover the roof, resulting in a denser roof.
-   * - **Coverage**
-     -  Extend the roof.
-   * - **Scale**
-     -  Change roof size.
-   * - **Constant/Relative Scale**
-     -  Size mode.
-
-----
 
 Gutter
---------
-Will spawn an array of object around the roof boundary.
+------
 
-.. list-table::
-   :header-rows: 0
-   :widths: 22 120
+Gutters along the eaves, with optional downspouts down the walls.
 
-   * - **Collection**
-     -  Collection to use for the gutter.
-   * - **Only Horizontal**
-     -  Ignore edges incline.
-   * - **Trim**
-     -  Trim the gutter.
-   * - **Z Offset**
-     -  Translate on Z.
-   * - **Distance**
-     -  Move away from the roof edge.
-   * - **Spacing**
-     -  Distance between objects.
-   * - **Fit**
-     -  Scale objects to reduce gap between them.
-   * - **Deform**
-     -  Deform along edge.
+.. image:: images/features/roof_gutter.gif
+   :class: feature-gif
+   :alt: Gutter
+
+``Collection`` / ``Spacing`` / ``Fit`` / ``Deform``
+  Gutter pieces and how they are laid along the eaves.
+
+``Trim`` / ``Z Offset`` / ``Distance``
+  Shortens the gutter at both ends, moves it up or down, and extends it past the corners.
+
+``Downspouts``
+  Pipes from the gutter down to the ground. Unfold it to set radius, elbow radius, wall gap, spacing, brackets and material.
 
 
+Beams
+-----
+
+Wooden beams under the roof.
+
+.. image:: images/features/roof_beams_verticals.gif
+   :class: feature-gif
+   :alt: Roof beams
+
+``Horizontal``
+  Rafters running from the eaves up to the ridge.
+
+``Vertical``
+  Purlins running level along the roof (slope roofs only).
+
+``Include Flat Roof`` / ``Include Slope Roof``
+  Which roofs get beams.
+
+``Density`` / ``Extension`` / ``Random Extension``
+  Number of beams and how far they stick out past the roof.
+
+``Width`` / ``Height`` / ``Offset`` / ``Translate Z`` / ``Material`` / ``UV Scale``
+  Size, position and material of the beams.

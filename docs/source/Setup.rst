@@ -1,22 +1,25 @@
 Start
-========
+=====
 
-Start Object
-~~~~~~~~~~~~~
+Starting Object
+---------------
 
-If you want to create your own building style from scratch, it's a very easy process!
-With the addon enabled, simple click on either **Starting Object** or **Example Object** to begin.
+Creating your own building style from scratch is a very easy process!
+With the addon enabled, simply click either **Starting Object** or **Example Object** to begin.
 
-
-The **Starting object** will create a simple cube and add the Auto-Building modifier on it as well as all the necessary Materials.
-
+The **Starting Object** creates a simple cube, adds the Auto-Building modifier to it, and sets up all the necessary materials.
 
 .. image:: images/ImportStart.gif
 
-The **Example object** will be a bit more complexe. I will comes already setup with simple geometries for you to have a quick start in the modeling process.
+The **Example Object** is a bit more complete: it comes already set up with simple geometry and collections, giving you a quick start for the modeling process.
 
 .. image:: images/ImportExample.gif
 
-You can also start the process by grabbing a preset model from the Asset Browser. You can then manually transfer the geometry node modifier and ID materials to the object you want to work on. Or modify the asset you just imported to your own taste.
+You can also start from a preset: grab any building from the Asset Browser, then either modify it to your taste, or manually transfer its Geometry Nodes modifier and ID materials onto the object you want to work on.
 
 
+Assign Boolean Faces
+--------------------
+
+When you model your own parts (windows, doors…), the faces that should cut a hole in the wall need the ``ID_Boolean`` material.
+Select the object (one **without** the Auto-Building modifier), go to Edit Mode, select the faces and click **Assign Boolean Faces** in the **Setup** panel. The material slot is added automatically if needed.

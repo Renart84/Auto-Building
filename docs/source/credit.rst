@@ -1,33 +1,34 @@
 Credits
-========
+=======
 
-This Geometry Node system uses some of the Node Groups made by awesome people, way better than me. 
-If you're curious to make your own system please do not hesitate to aquire their node groups as they will save you so much time.
+This Geometry Nodes system uses node groups made by some awesome people, way better than me.
+If you're curious about building your own system, don't hesitate to acquire their node groups — they will save you an enormous amount of time.
 
-Erindale: 
-https://erindale.gumroad.com/
-https://www.youtube.com/@Erindale
+**Erindale**
 
-He is probably the best person to look at if you want to learn Geometry Node yourself. He proposes some awesome videos on Youtube (which I learnt a tone from) but also has a great online class if you want to go more in depth. 
-His Erindale Toolkit will give you access to a lot of very useful node groups
+- https://erindale.gumroad.com/
+- https://www.youtube.com/@Erindale
 
+He is probably the best person to follow if you want to learn Geometry Nodes yourself. His YouTube videos taught me a ton, and he also offers a great online class if you want to go deeper. His Erindale Toolkit gives you access to a lot of very useful node groups.
 
-Mohammed Riaz:
-https://artofriaz3d.gumroad.com/l/Nodeplusplus
+**Mohammed Riaz**
 
-He has some pretty useful nodegroups already made to save some times :)
+- https://artofriaz3d.gumroad.com/l/Nodeplusplus
 
-Higgsas:
-https://twitter.com/higgsasxyz
-https://higgsas.gumroad.com/l/wrusot?layout=profile
+He has some very useful ready-made node groups that will save you time :)
 
-His toolpack contain a lot of powerful nodes. I'm specially using his Tesselate solution to allow the deformation of the objects on the face. It's someone always innovating with Geoemtry Node and you should follow his work.
+**Higgsas**
+
+- https://twitter.com/higgsasxyz
+- https://higgsas.gumroad.com/l/wrusot?layout=profile
+
+His toolpack contains a lot of powerful nodes. I'm especially using his Tessellate solution to deform objects onto faces. He's always innovating with Geometry Nodes and you should follow his work.
 
 
 Contacts
-=========
+========
 
-If you have any problems or questios you can contact me via:
+If you have any problems or questions, you can contact me via:
 
 Email: julien.gauthier.contact@gmail.com
 

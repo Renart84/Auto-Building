@@ -2,36 +2,36 @@
 
 
 Welcome!
-===================================
+========
 
-Welcome to the Auto-Building's documentation!
-
-.. note::
-   **This version of the addon is for Blender 4.5 or above, only!**
-
+Welcome to the Auto-Building documentation!
 
 .. note::
-   **The system is using geometry node to run, the Addon itself is not mandatory but provides a better interface as well as some useful actions.**
+   **This version of the addon requires Blender 4.5 or above.**
+
+.. note::
+   **Auto-Building runs entirely on Geometry Nodes. The addon itself is optional, but it provides a much nicer interface along with several useful helper actions.**
 
 
 Introduction
-~~~~~~~~~~~~
-------------------------
+------------
 
-The idea is to start from a simple low-poly mesh and procedurally replace its faces with building elements, allowing you to create detailed structures.
+Auto-Building starts from a simple low-poly mesh and procedurally replaces its faces with building elements, letting you create detailed structures in minutes.
 
-Although the result can look complex, it remains easy to edit and iterate on, since everything is handled procedurally using Geometry Nodes.
+Even though the result can look complex, it stays easy to edit and iterate on: everything is handled procedurally by Geometry Nodes, so the original mesh remains your control surface.
 
-You first need to build your building parts separately and organize them into dedicated collections (Windows, Doors, Balconies, etc.).
+The workflow in short:
 
-Then, you set up the system by assigning each collection to a specific category, either through the add-on menu or directly in the Geometry Nodes modifier.
+1. Model your building parts (windows, doors, balconies, etc.) and organize them into dedicated collections.
+2. Assign each collection to a category, either through the addon panel or directly in the Geometry Nodes modifier.
+3. Select faces on your base mesh and use the assignment buttons in the addon interface — the system instantly spawns objects from the corresponding collection on those faces.
 
-Once this is done, assigning that the ID material corresponding to the category to any face of your base mesh will automatically spawn the objects from the corresponding collection at the center of that face.
+Under the hood, each button simply assigns an ID material to the selected faces, so you can always do the same thing manually through the material slots.
 
 .. image:: images/MainProcess.jpg
 
-A lot more things can be done and this documentation will explain all the settings. 
-Feel free to open the Sample scene to see what's possible and how it works :D
+There is a lot more to discover, and this documentation covers every setting.
+Feel free to open the Sample scene to see what is possible and how it all works :D
 
 
 .. toctree::
@@ -46,19 +46,31 @@ Feel free to open the Sample scene to see what's possible and how it works :D
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: 🏠 Settings
+   :caption: 🏠 Core
 
    walls
-   creases
+   trims
    roofs
-   extra
-   config
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: ✨ Other
+   :caption: ✨ Systems
 
+   foundation
+   supports
+   facade
+   pipes
+   interior
+   destruction
+   deformation
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: ⚙️ Advanced
+
+   config
    autobase
    baking
 
@@ -68,4 +80,3 @@ Feel free to open the Sample scene to see what's possible and how it works :D
    :caption: ✉️ Contacts
 
    credit
-

@@ -1,29 +1,32 @@
 Building parts
-------------
+==============
 
-The parts used by the system need to be oriented in a specific way in order to work properly. 
+The parts used by the system must be oriented in a specific way to work properly.
 
-Most of the time you can assume than the top of your objects (Windows, Doors, etc) will oriented toward the positive Y axis, and the front toward the positive Z axis.
-Similar than the Asset browser orientation system, the Z axis will be used perpendicularly to the surface the object is used on.
+For most parts (windows, doors, etc.), the top of the object should point toward the **positive Y axis**, and the front toward the **positive Z axis**.
+Just like Blender's Asset Browser orientation convention, the Z axis is used perpendicular to the surface the object lands on.
 
 .. image:: images/PartOrientation.jpg
 
-All the parts you will be making need to be put in their own collections. If you put multiple objects in the same collection, the system will pick them randomly in it.
+Every part must be placed in its own collection. If a collection contains several objects, the system picks between them randomly.
 
 .. image:: images/RandomCollectionObject.jpg
 
-Some objects such as for the Roof or Support will have their orientation a bit difference.
+Some objects, such as roof or support parts, use a slightly different orientation.
 
-If you're not sure, a text is added next to the Example Objects and an Orientation Checker object is here for you to test it.
+If you are unsure, a text label is placed next to the Example Objects, and an Orientation Checker object is included so you can test your parts.
 
-Here is the list of the directions.
+Here is the full list of directions:
 
 .. image:: images/Orientation.jpg
 
+
+.. _part-booleans:
+
 Booleans
-~~~~~~~~
+--------
 
 .. image:: images/Boolean.jpg
 
-If you want your objects to create a hole in the face (for windows for instance) You'll need to model an extra shape (like a box) combined with your object, and apply the ID_Boolean on it. 
-This shape will be used to boolean a hole in the wall and won't be rendered.
+If you want an object to cut a hole in the face it sits on (a window, for instance), model an extra shape (like a box) together with your object and assign the **ID_Boolean** material to it.
+This shape is used to boolean a hole into the wall and is never rendered.
