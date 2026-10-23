@@ -1,23 +1,23 @@
 Supports
 ========
 
-Pillars placed under the parts of the building that overhang: porches, awnings, upper floors sticking out.
+Pillars appear **automatically** under every part of the building that overhangs: extrude an upper floor out and the pillars follow.
 
 .. image:: images/features/extra_supports.gif
    :class: feature-gif
-   :alt: Supports
+   :alt: Supports appearing under an extruded overhang
 
 ``Support Collection``
   Objects used as pillars.
 
 ``Inset``
-  Moves the supports in from the corners.
-
-``Use Vertex Group`` / ``Vertex Group Name``
-  On: supports only on the vertices of this vertex group (``Supports`` by default). Off: a support on every corner of the overhang.
+  Moves the pillars in from the corners.
 
 ``Support Pillar Subdivision``
-  Adds more supports along the edges.
+  Adds more pillars along the edges.
+
+``Use Vertex Group`` / ``Vertex Group Name``
+  On: pillars only on the vertices of this vertex group (``Supports`` by default). Off: a pillar on every corner of the overhang.
 
 ``Keep in Bake Mesh``
   Includes the supports when baking the building to a mesh (see :doc:`baking`).
@@ -26,7 +26,7 @@ Pillars placed under the parts of the building that overhang: porches, awnings, 
 Fit Edges
 ---------
 
-Stretches the supports along the overhang edges instead of placing single pillars. Handy for walls or panels under a balcony.
+Instead of a pillar at each corner, the object spawns on the **edges in between** and is scaled to fit them. Use it for arches, beams or panels under a porch or balcony.
 
 .. image:: images/features/extra_supports_fit-edges.gif
    :class: feature-gif
@@ -36,7 +36,7 @@ Stretches the supports along the overhang edges instead of placing single pillar
   Turns the fitted mode on.
 
 ``Offset``
-  Lower values push the fitted supports outward.
+  Lower values push the fitted support outward.
 
 ``Constant/Relative`` / ``Scale``
-  Size of the fitted supports, fixed or relative to the edge.
+  Size of the fitted support, fixed or relative to the edge.
