@@ -75,10 +75,18 @@ Places objects exactly on the vertices of a vertex group. Four slots, **A to D**
 Decals
 ------
 
-Projects decal objects (dirt, leaks, posters, graffiti…) on the surfaces.
+Projects decal objects (dirt, leaks, posters, graffiti…) onto the walls. Decals wrap around corners.
 
-1. Assign the ``ID_Decals`` material to the faces that should receive decals, using the **Decals** button.
-2. Set the decal **Collection**.
+1. In Edit Mode, add a plane in front of the wall where you want the decal.
+2. Select it and click the **Decals** button: it gets the ``ID_Decals`` material and becomes a projected decal.
+3. Move or scale the plane to place the decal; it slides along the wall and wraps around the corner.
+
+.. image:: images/features/extra_facade_decals.gif
+   :class: feature-gif
+   :alt: Decals
+
+``Collection``
+  The decal objects.
 
 ``Wrap`` / ``Subdivision``
   Wraps the decals around the surface, with enough resolution to follow it.
