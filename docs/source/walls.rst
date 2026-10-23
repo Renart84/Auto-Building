@@ -223,4 +223,14 @@ Places a dedicated object on the wall corners, for example corner stones or quoi
   Objects used on inner and outer corners.
 
 ``Corner Spacing`` / ``Corner Angle Threshold`` / ``Corner Clearance``
-  Spacing along the corner, which angles count as a corner, and the gap kept free around it.
+  The piece repeats up the corner every Corner Spacing and is scaled to fill the height exactly. Also sets which angles count as a corner and the gap kept free around it.
+
+Modular kits
+^^^^^^^^^^^^
+
+Corner Pieces also work with a **modular kit**, the way game-engine assets are built: wall panels (window, door…) as Wall A/B/C, and a dedicated corner panel as ``Corner Out``. The walls snap to the module size and the corner panel closes every outer corner cleanly.
+
+.. image:: images/wall_corner_kit_pieces.png
+   :alt: Modular kit pieces: window panel, door panel and corner panel
+
+Model all pieces on the same module size, then turn on **Module Grid** (see :doc:`deformation`) so the building always lands on whole modules.
