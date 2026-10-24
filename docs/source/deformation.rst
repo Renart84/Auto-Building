@@ -48,5 +48,12 @@ Snaps the base mesh to a regular grid before the building is generated: walls la
 ``Min Face Size``
   Faces smaller than this are left alone.
 
+The example uses a small **modular kit**: a window panel (Wall A), a door panel (Wall B) and a corner panel placed with the wall **Corner Pieces** (``Corner Out``). With every piece modelled on the module size, the snapped walls always receive whole panels, as in a game-engine kit.
+
+.. image:: images/wall_corner_kit_pieces.png
+   :alt: Kit pieces used by the Module Grid example
+
+See :ref:`walls-corner-pieces` for the corner setup.
+
 .. tip::
    For smooth bends, give the walls enough resolution with **Wall Subdivision** or **Output Subdivision** (see :doc:`walls`).

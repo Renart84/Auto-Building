@@ -210,6 +210,8 @@ With **Bottom**, a door stays on the ground even when the wall gets taller, whil
    :class: feature-gif
    :alt: Force Vertical
 
+.. _walls-corner-pieces:
+
 Corner Pieces
 ~~~~~~~~~~~~~
 
