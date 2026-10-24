@@ -1,37 +1,36 @@
 .. image:: images/CoverIlustration.jpg
+   :alt: Auto-Building
 
+Welcome
+=======
 
-Welcome!
-========
-
-Welcome to the Auto-Building documentation!
-
-.. note::
-   **This version of the addon requires Blender 4.5 or above.**
+**Auto-Building** turns a simple low-poly mesh into a detailed building. You model the rough shape, tag its faces and edges, and Geometry Nodes fill them with walls, windows, trims, roofs and props.
 
 .. note::
-   **Auto-Building runs entirely on Geometry Nodes. The addon itself is optional, but it provides a much nicer interface along with several useful helper actions.**
+   **Requires Blender 5.0 or newer** (tested on 5.0, 5.1 and 5.2).
 
+The original mesh stays your control surface: move a wall, extrude a floor, and the building follows.
 
-Introduction
+.. image:: images/workflow_overview.png
+   :alt: Low-poly mesh, ID materials, generated building
+
+How it works
 ------------
 
-Auto-Building starts from a simple low-poly mesh and procedurally replaces its faces with building elements, letting you create detailed structures in minutes.
+1. **Model the parts** (windows, doors, balconies…) and put each kind in its own collection.
+2. **Plug the collections** into the Auto-Building panel (Walls, Trims, Roof…).
+3. **Tag the base mesh**: select faces or edges and click a button. The matching objects appear on them instantly.
 
-Even though the result can look complex, it stays easy to edit and iterate on: everything is handled procedurally by Geometry Nodes, so the original mesh remains your control surface.
+Each button only assigns an **ID material** to the faces (or a crease value to the edges), so you can always do the same by hand. See :doc:`id-materials`.
 
-The workflow in short:
+Where to start
+--------------
 
-1. Model your building parts (windows, doors, balconies, etc.) and organize them into dedicated collections.
-2. Assign each collection to a category, either through the addon panel or directly in the Geometry Nodes modifier.
-3. Select faces on your base mesh and use the assignment buttons in the addon interface — the system instantly spawns objects from the corresponding collection on those faces.
-
-Under the hood, each button simply assigns an ID material to the selected faces, so you can always do the same thing manually through the material slots.
-
-.. image:: images/MainProcess.jpg
-
-There is a lot more to discover, and this documentation covers every setting.
-Feel free to open the Sample scene to see what is possible and how it all works :D
+- New here? Follow the :doc:`quickstart`, five minutes from a cube to a building.
+- Installing: :doc:`installation`.
+- Making your own parts: :doc:`Buildingparts`.
+- Sending the building to Unreal, Unity or Godot: :doc:`game-engine`.
+- Something looks wrong: :doc:`troubleshooting`.
 
 
 .. toctree::
@@ -40,8 +39,10 @@ Feel free to open the Sample scene to see what is possible and how it all works 
    :caption: 🚀 Start
 
    installation
+   quickstart
    Setup
    Buildingparts
+   id-materials
 
 .. toctree::
    :maxdepth: 2
@@ -70,9 +71,11 @@ Feel free to open the Sample scene to see what is possible and how it all works 
    :hidden:
    :caption: ⚙️ Advanced
 
-   config
    autobase
+   config
    baking
+   game-engine
+   troubleshooting
 
 .. toctree::
    :maxdepth: 2

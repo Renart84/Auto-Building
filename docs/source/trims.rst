@@ -16,7 +16,7 @@ In **Edit Mode**, select the edges (``Alt+click`` selects a whole edge loop) and
    :alt: Assigning Trim A to edges
 
 .. tip::
-   The horizontal/vertical detection angle is in :doc:`config`.
+   **Trims › Settings** shows the crease value and channel of the selected edges, and the **H/V Threshold**: the angle that decides whether an edge is horizontal or vertical.
 
    *Bonus:* each channel is a range of crease values, shown at the top of its panel. The Trim buttons set it for you; you only need this to set it by hand (``Shift+E``).
    A 0–0.1 · B 0.1–0.2 · C 0.2–0.3 · D 0.3–0.4 · E 0.4–0.5 · F 0.5–0.6 · G 0.6–0.7 · H 0.7–0.8 · I 0.8–0.9 · J 0.9–1.0

@@ -1,7 +1,7 @@
 Credits
 =======
 
-This Geometry Nodes system uses node groups made by some awesome people, way better than me.
+Auto-Building uses node groups made by some awesome people.
 If you're curious about building your own system, don't hesitate to acquire their node groups — they will save you an enormous amount of time.
 
 **Erindale**
@@ -25,10 +25,10 @@ He has some very useful ready-made node groups that will save you time :)
 His toolpack contains a lot of powerful nodes. I'm especially using his Tessellate solution to deform objects onto faces. He's always innovating with Geometry Nodes and you should follow his work.
 
 
-Contacts
-========
+Contact
+=======
 
-If you have any problems or questions, you can contact me via:
+For questions, bug reports or feedback, contact me via:
 
 Email: julien.gauthier.contact@gmail.com
 

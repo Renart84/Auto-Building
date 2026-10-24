@@ -1,74 +1,113 @@
 Export & Baking
 ===============
 
-.. image:: images/SetupMenu.jpg
+Three ways to take the building out of Geometry Nodes, from the lightest to the most game-ready:
+
+- **Apply Modifier** – real objects in Blender, instancing kept.
+- **Baking** – a single low-poly mesh with baked textures.
+- **Game Export** – one click to a file for Unreal, Unity or Godot (see also :doc:`game-engine`).
+
 
 Applying the modifier
 ---------------------
 
-There are two ways to turn your procedural building into real geometry:
+``Setup › Apply Modifier``
+  Applies the building **without losing the instancing**. The shell becomes a mesh, and every placed piece becomes a child object that **shares its mesh** with the identical pieces: 321 roof tiles become 321 objects using one single mesh. Light files, and the best starting point for a game engine.
 
-**Classic apply.** Enable **Realize Instances** at the top of the modifier, then click **Apply Modifier**. You get a single mesh containing the whole building.
+  A hidden copy of the original procedural object is kept in the ``AB_APPLY_BACKUP`` collection, so you can always go back.
 
-**Apply (Keep Instances).** This button in the Setup panel applies the building *without* losing the instancing: the shell becomes a mesh, and every instanced piece becomes a child object with **linked** mesh data — 321 roof tiles become 321 objects sharing a single mesh.
-This keeps the file small and is the best starting point for game engines.
+**Classic apply.** Turn on **Config › Realize Instances**, then use **Apply** in the modifier menu. You get one single mesh with everything merged. Simple, but heavy.
 
-.. note::
-   Apply (Keep Instances) automatically stores a hidden backup of your original object in a backup collection, so you can always go back.
+
+Baking
+------
+
+**Export › Baking** bakes the whole building onto a light low-poly mesh, with Cycles, in one click. Perfect for background buildings, mobile and VR.
+
+.. image:: images/panel_baking.png
+   :alt: Baking panel
+   :width: 420px
+
+What **Bake Building** does:
+
+1. Takes the full building as the high-poly source.
+2. Builds the low-poly target: the **Bake Mesh** output when the building has one, otherwise the base mesh. Parts flagged **Keep in Bake Mesh** (trims, supports, facade props…) stay as real geometry.
+3. Unwraps it with large UV islands.
+4. Bakes the maps (lighting-free) and builds a material with them. Alpha decals are composited correctly.
+5. Creates ``<name>_BAKE_LOW`` next to the original.
+
+``Resolution``
+  Size of the maps: 1K, 2K or 4K.
+
+``Margin (px)``
+  Bleed around the UV islands, so no seams show at a distance.
+
+``Cage Extrusion`` / ``Max Ray Distance``
+  How far the bake looks out from and into the low-poly surface. Raise them when deep parts (balconies, deep windows) come out missing or black.
+
+``Samples``
+  Cycles samples per pixel. 16 is enough for colour and normal; raise for AO.
+
+``Move Result Aside``
+  Places the baked object beside the original instead of on top of it.
+
+``Color`` / ``Normal`` / ``Roughness`` / ``Glossiness`` / ``AO`` / ``Metal`` / ``Emit`` / ``Curvature``
+  The maps to bake. Glossiness is the inverted roughness; Curvature is derived from the normal map (an edge and cavity mask for wear).
+
+``Pack ORM``
+  Also writes an ORM map (R = AO, G = Roughness, B = Metallic), the standard for glTF and Unreal.
+
+``Save Maps to Disk``
+  Writes the maps as images in the folder below (``//bake/`` = next to the ``.blend``).
+
+``Bake Building`` / ``Bake Selected Buildings``
+  Bakes the active building, or every selected one in a row.
+
+.. tip::
+   Baking takes time: save your file first, and start with 1K to check the result.
 
 
 Game Export
 -----------
 
-The **Export** panel gives you one-click exports tuned for the main game engines:
+**Export › Game Export** writes the selected buildings to a file ready for a game engine: the shell, the pieces as shared meshes, and materials the engine can read.
 
-``Realize Instances``
-  Realizes the instances before export, for a single combined mesh.
+.. image:: images/panel_game_export.png
+   :alt: Game Export panel
+   :width: 420px
 
-``Export Unreal (.fbx)``
-  Exports the selected building as FBX with Unreal-friendly settings.
+``Engine``
+  **Unreal**, **Unity** or **Godot**. Sets the naming, the axes and the default format.
 
-``Export Unity (.fbx)``
-  Exports the selected building as FBX with Unity-friendly settings.
+``Format``
+  **Auto** picks the best one: glTF for Unreal and Godot, FBX for Unity. **glTF (.glb)** carries real PBR materials with embedded textures. **FBX** is the legacy format.
 
-``Export Godot (.glb)``
-  Exports the selected building as glTF binary for Godot.
+``Output``
+  Folder of the exported files. ``//export`` = an ``export`` folder next to the ``.blend``.
 
-Each button handles the conversion and the engine-specific axes and scale conventions for you.
+``Mode``
+  **Instanced**: the shell plus one mesh per unique piece, placed many times. Small files, instancing in the engine. **Merged**: everything joined into one mesh per building. Simplest import, biggest file.
+
+``Game Materials``
+  Engines only read a texture plugged **straight** into the Principled BSDF. With this on, each material is replaced on the exported copy by a simple ``_Game`` twin with the colour, roughness, metallic and normal images wired directly. Your Blender materials are never changed.
+
+``Flip Normal Green (FBX only)``
+  Converts normal maps to the DirectX convention Unreal expects. Only for Unreal with FBX; leave it on unless your normal maps are already DirectX.
+
+``Bake Missing Channels`` / ``Bake Size``
+  When a channel has no image (a tinted colour, a ColorRamp, a Bump node, a procedural texture), it is baked to a texture so it survives the export.
+
+``Export Unreal / Unity / Godot``
+  Exports. The button shows the engine and the file type.
 
 
-Baking textures
----------------
+Baking by hand
+--------------
 
-To use the building outside of Blender, it's often a good idea to bake the textures onto the original mesh, or onto the low-poly version (the one you get when you turn the Geometry Nodes modifier off).
+You can also bake with Blender's own tools, for full control:
 
-Here are my settings using the **Simple Bake** addon — the same result is achievable without it:
-
-1) Apply the Geometry Nodes modifier, create a new UV map called ``SimpleBake``, and unwrap your model however you like (here I just used Smart UV Project).
-
-.. image:: images/Baking1.jpg
-
-2) Create a preset for easier re-use (I also keep one for baking the high poly onto the low poly).
-
-Add your object to the **Bake objects** list and select the textures you need in the **PBR Bakes** list.
-
-.. image:: images/Baking2.jpg
-
-3) Here I'm baking 4K maps. Turn on **Transparent background** if your building uses transparency in the decal materials.
-
-Make sure **Prefer existing UV maps called SimpleBake** is enabled.
-In the **Other Settings** tab (not open in the screenshot), you can enable **Copy objects and apply bakes** to get the result as a copy.
-
-.. image:: images/Baking3.jpg
-
-4) Run the baking process by clicking **Bake!**
-
-The decal transparency is not handled properly in Eevee here, so I switch the Blend Mode of the baked materials to **Alpha Hashed** to fix it.
-
-.. image:: images/Baking4.jpg
-
-5) You can also bake the high poly onto the low poly. Play with **Auto extruded cage type** and **Cage Extrusion** to improve the result.
-
-.. image:: images/Baking5.jpg
-
-.. image:: images/Baking6.jpg
+1. Turn on **Config › Realize Instances** and duplicate the building as the high poly; apply its modifier.
+2. Duplicate the base mesh as the low poly and unwrap it (**UV › Smart UV Project**).
+3. Give the low poly a material with an empty **Image Texture** node, selected.
+4. In **Render Properties**, switch to **Cycles** and open **Bake**: pick the bake type, turn on **Selected to Active**, set **Extrusion** and **Max Ray Distance**.
+5. Select the high poly, then the low poly (active), and click **Bake**. Save the image.
