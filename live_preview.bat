@@ -11,5 +11,5 @@ if not exist ".venv\Scripts\python.exe" (
 
 ".venv\Scripts\python" -c "import sphinx_autobuild" 2>nul || ".venv\Scripts\python" -m pip install sphinx-autobuild
 
-".venv\Scripts\python" -m sphinx_autobuild docs\source docs\_build\html --open-browser --port 8000
+".venv\Scripts\python" -m sphinx_autobuild docs\source docs\_build\html -E -a --open-browser --port 8000
 pause

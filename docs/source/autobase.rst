@@ -1,21 +1,43 @@
 Auto-Base
 =========
 
-**Auto-Base** builds the base mesh for you: from a single face (or any flat footprint), it raises blocks, floors and a roof, and tags every face with the right ID material. Auto-Building then dresses it. Great for background buildings, quick variations and city blocks.
-
-.. image:: images/features/autobase_base.gif
-   :class: feature-gif
-   :alt: Auto-Base Count, Layout, Height and Seed
+**Auto-Base** builds the base mesh for you. The object is only a **flat plane, the footprint of the building**: Auto-Base raises the blocks, floors and roof from it and tags every face with the right ID material. An Auto-Building modifier placed after it then dresses those faces. Great for background buildings, quick variations and city blocks.
 
 
 Getting started
 ---------------
 
-1. With nothing selected, click **Setup › Make Auto-Base**: a plane with the Auto-Base modifier is created.
-2. With the plane selected, click **Make Auto-Building**: the Auto-Building modifier is added **after** Auto-Base.
-3. Plug your collections in the Walls, Trims and Roof panels as usual.
+1. With nothing selected, click **Setup › Make Auto-Base**. A plane is created with the Auto-Base modifier: you see coloured blocks, one colour per ID material.
+2. Give it a style: select the new plane, then (Shift+click) an existing Auto-Building, and in the building's modifier menu (**⌄** next to the Auto-Building modifier) choose **Copy to Selected**. The modifier is added **after** Auto-Base, with all the walls, trims and roofs of that building.
+
+.. image:: images/features/autobase_create.gif
+   :class: feature-gif
+   :alt: Make Auto-Base, then copy an Auto-Building modifier onto it
+
+.. tip::
+   No building to copy from? Select the plane and click **Make Auto-Building**, then plug your collections in the panels as usual.
 
 You can also select your own flat footprint mesh and click **Make Auto-Base** on it.
+
+
+The footprint
+-------------
+
+Everything comes from the plane. Edit it in **Edit Mode**, extrude edges, move vertices, draw any outline: the whole building follows. Then play with the settings.
+
+.. image:: images/features/autobase_footprint.gif
+   :class: feature-gif
+   :alt: Editing the footprint and a few settings
+
+``Footprint › Rectilinear Grid``
+  Rebuilds every footprint face with right angles, on a grid of this size, aligned to its main direction. Sketch roughly, the grid squares it up. ``0`` = off.
+
+``Footprint › Min Building Area``
+  Footprint faces smaller than this (m²) are removed. ``0`` = off.
+
+
+Main settings
+-------------
 
 The settings live in the **Auto-Base** panel, which appears when the selected object has the modifier.
 
@@ -27,22 +49,6 @@ The settings live in the **Auto-Base** panel, which appears when the selected ob
 
 ``Group House Islands``
   Treats each separate piece of the footprint as its own house.
-
-
-The footprint
--------------
-
-The mesh under Auto-Base is the **footprint** of the building. Edit it in Edit Mode, extrude edges, move vertices, and the building follows.
-
-.. image:: images/features/autobase_footprint.gif
-   :class: feature-gif
-   :alt: Editing the footprint
-
-``Footprint › Rectilinear Grid``
-  Rebuilds every footprint face with right angles, on a grid of this size, aligned to its main direction. Sketch roughly, the grid squares it up. ``0`` = off.
-
-``Footprint › Min Building Area``
-  Footprint faces smaller than this (m²) are removed. ``0`` = off.
 
 
 Base
@@ -78,10 +84,6 @@ Auto-Base tags the faces with **wall categories**, which are the Base and Wall s
 
 Roof and extensions
 -------------------
-
-.. image:: images/features/autobase_roof-extension.gif
-   :class: feature-gif
-   :alt: Roof Style and Small Extension
 
 ``Roof › Roof Style``
   **Flat**, **Slope Single**, **Slope Double**, **Slope Pyramid** or **Slope Flat Top**. Slope Scale and Slope Top Surface shape the slopes; Side Walls sets the category of the gable walls.
