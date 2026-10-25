@@ -28,9 +28,13 @@ His toolpack contains a lot of powerful nodes. I'm especially using his Tessella
 Contact
 =======
 
-For questions, bug reports or feedback, contact me via:
+**Questions about your purchase, or anything private**
+  Send me a message from the `Auto-Building page on Superhive <https://superhivemarket.com/products/auto-building>`_ (you need to be logged in).
 
-Email: julien.gauthier.contact@gmail.com
+**Bug reports and feature requests**
+  Open an issue on `GitHub <https://github.com/Renart84/Auto-Building/issues>`_. Add your Blender version, the add-on version (shown in the Setup panel) and a screenshot: it helps a lot. Other users can see the answer too.
+
+You can also follow my work on:
 
 `Twitter <https://twitter.com/julgaimo>`_
 
